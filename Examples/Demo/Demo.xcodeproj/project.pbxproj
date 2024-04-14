@@ -29,6 +29,7 @@
 		99DE2A3D294F256A0025E332 /* HeadingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DE2A3C294F256A0025E332 /* HeadingsView.swift */; };
 		99DE2A3F294F33030025E332 /* ListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DE2A3E294F33030025E332 /* ListsView.swift */; };
 		99DE2A41294F8ED70025E332 /* TextStylesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DE2A40294F8ED70025E332 /* TextStylesView.swift */; };
+		A6F214062BCC842A00225587 /* TableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F214052BCC842A00225587 /* TableViewDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		99DE2A3C294F256A0025E332 /* HeadingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingsView.swift; sourceTree = "<group>"; };
 		99DE2A3E294F33030025E332 /* ListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsView.swift; sourceTree = "<group>"; };
 		99DE2A40294F8ED70025E332 /* TextStylesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStylesView.swift; sourceTree = "<group>"; };
+		A6F214052BCC842A00225587 /* TableViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				99DE2A40294F8ED70025E332 /* TextStylesView.swift */,
 				99DE2A22294D9A2C0025E332 /* Assets.xcassets */,
 				99DE2A24294D9A2C0025E332 /* Preview Content */,
+				A6F214052BCC842A00225587 /* TableViewDemo.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F214062BCC842A00225587 /* TableViewDemo.swift in Sources */,
 				99DE2A21294D9A2B0025E332 /* ContentView.swift in Sources */,
 				991E398A2950B0DF00A3012A /* TablesView.swift in Sources */,
 				99DE2A33294D9E320025E332 /* DemoView.swift in Sources */,

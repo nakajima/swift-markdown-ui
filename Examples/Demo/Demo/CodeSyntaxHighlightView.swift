@@ -3,9 +3,9 @@ import Splash
 import SwiftUI
 
 struct CodeSyntaxHighlightView: View {
-  @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
 
-  private let content = #"""
+    private let content = #"""
     This screen demonstrates how you can integrate a 3rd party library
     to render syntax-highlighted code blocks.
 
@@ -52,26 +52,26 @@ struct CodeSyntaxHighlightView: View {
     ```
     """#
 
-  var body: some View {
-    DemoView {
-      Markdown(self.content)
-        .markdownCodeSyntaxHighlighter(.splash(theme: self.theme))
+    var body: some View {
+        DemoView {
+            Markdown(self.content)
+                .markdownCodeSyntaxHighlighter(.splash(theme: self.theme))
+        }
     }
-  }
 
-  private var theme: Splash.Theme {
-    // NOTE: We are ignoring the Splash theme font
-    switch self.colorScheme {
-    case .dark:
-      return .wwdc17(withFont: .init(size: 16))
-    default:
-      return .sunset(withFont: .init(size: 16))
+    private var theme: Splash.Theme {
+        // NOTE: We are ignoring the Splash theme font
+        switch colorScheme {
+        case .dark:
+            return .wwdc17(withFont: .init(size: 16))
+        default:
+            return .sunset(withFont: .init(size: 16))
+        }
     }
-  }
 }
 
 struct CodeSyntaxHighlightView_Previews: PreviewProvider {
-  static var previews: some View {
-    CodeSyntaxHighlightView()
-  }
+    static var previews: some View {
+        CodeSyntaxHighlightView()
+    }
 }
