@@ -59,7 +59,7 @@ public class TableViewRendererController: UITableViewController {
 
 			return content.renderPlainText().kebabCased() == id
 		}) {
-			let indexPath = IndexPath(index: index)
+			let indexPath = IndexPath(row: index, section: 0)
 			tableView.scrollToRow(at: indexPath, at: .top, animated: true)
 		}
 	}
