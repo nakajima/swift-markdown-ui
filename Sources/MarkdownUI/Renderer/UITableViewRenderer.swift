@@ -51,6 +51,19 @@ public class TableViewRendererController: UITableViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 
+	func scrollToID(id: String) {
+		if let index = markdown.blocks.firstIndex(where: { block in
+			guard case let .heading(level: _, content: content) = block else {
+				return false
+			}
+
+			return content.renderPlainText().kebabCased() == id
+		}) {
+			let indexPath = IndexPath(index: index)
+			tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+		}
+	}
+
 	public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		markdown.blocks.count
 	}
@@ -66,6 +79,18 @@ public class TableViewRendererController: UITableViewController {
 					.foregroundColor(attributes.foregroundColor)
 					.background(attributes.backgroundColor)
 					.markdownTheme(.gitHub)
+					.environment(
+					\.openURL,
+						OpenURLAction { url in
+							guard let fragment = url.fragment?.lowercased() else {
+								return .systemAction
+							}
+							withAnimation {
+								self.scrollToID(id: fragment)
+							}
+							return .handled
+						}
+					)
 			}
 		}
 
@@ -104,7 +129,6 @@ public struct TableViewWrapper: UIViewControllerRepresentable {
 	}
 
 	public init(content: String) {
-		print("sup")
 		self.content = content
 	}
 }

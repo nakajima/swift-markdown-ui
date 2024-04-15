@@ -53,6 +53,5 @@ struct TableViewDemo: View {
 
 	var body: some View {
 		TableViewWrapper(content: content)
-			.frame(maxWidth: .infinity, maxHeight: .infinity)
 	}
 }
