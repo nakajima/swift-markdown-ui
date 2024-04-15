@@ -1,15 +1,15 @@
 import SwiftUI
 
-struct TextStyleAttributesReader<Content: View>: View {
+public struct TextStyleAttributesReader<Content: View>: View {
   @Environment(\.textStyle) private var textStyle
 
   private let content: (AttributeContainer) -> Content
 
-  init(@ViewBuilder content: @escaping (_ attributes: AttributeContainer) -> Content) {
+	public init(@ViewBuilder content: @escaping (_ attributes: AttributeContainer) -> Content) {
     self.content = content
   }
 
-  var body: some View {
+  public var body: some View {
     self.content(self.attributes)
   }
 
