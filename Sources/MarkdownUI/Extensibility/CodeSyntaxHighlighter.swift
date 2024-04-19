@@ -9,7 +9,8 @@ public protocol CodeSyntaxHighlighter {
   /// - Parameters:
   ///   - code: The code block.
   ///   - language: The language of the code block.
-  func highlightCode(_ code: String, language: String?) -> Text
+	associatedtype Output: View
+	func highlightCode(_ code: String, language: String?) -> Output
 }
 
 /// A code syntax highlighter that returns unstyled code blocks.
